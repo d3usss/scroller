@@ -1,0 +1,16 @@
+{
+  "name": "d3usss-scroller",
+  "version": "1.0.0",
+  "description": "easy-to-use scrolling library",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.13.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
