@@ -1,5 +1,1 @@
-module.exposrt = {
-    hello: function () {
-        return "hello, world";
-    }
-}
+export { useScroller } from "./useScoroller";
