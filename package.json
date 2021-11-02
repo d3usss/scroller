@@ -4,6 +4,7 @@
   "description": "easy-to-use scrolling library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -11,10 +12,26 @@
     "@storybook/addon-essentials": "^6.1.21",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.0.28",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
     "babel-loader": "^8.2.3",
     "esbuild": "^0.13.10",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "mrm": "^2.6.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.7"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -23,6 +40,12 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "node esbuild.js"
+    "build": "node esbuild.js && ts",
+    "test": "jest",
+    "lint": "eslint \"src/*\"",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": ["eslint --cache --fix", "jest --passWithNoTests"]
   }
 }

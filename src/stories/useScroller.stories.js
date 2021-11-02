@@ -1,5 +1,5 @@
 import React from "react";
-import { useScroller } from "../useScoroller";
+import { useScroller } from "../useScroller";
 
 export default {
     "title": "UseScorller"
